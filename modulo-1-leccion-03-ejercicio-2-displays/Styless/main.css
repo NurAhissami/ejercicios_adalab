@@ -1,0 +1,20 @@
+p {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+.inline {
+  display: inline;
+  background-color: royalblue;
+}
+.inline-block {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: greenyellow;
+}
+.none {
+  display: none;
+  height: 100px;
+  width: 100px;
+}
