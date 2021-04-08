@@ -1,0 +1,9 @@
+.container {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+}
