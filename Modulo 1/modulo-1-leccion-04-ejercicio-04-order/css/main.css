@@ -1,8 +1,28 @@
-.box {
-  width: 20%;
-  height: auto;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
-.container;
-.container-imagen {
-  background-image: url(././images/Captura de pantalla 2021-01-04 a las 13.53.02.png" alt="perrita");
+.img {
+  height: 20%;
+  width: 20%;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: lightgrey;
+  margin: 10px;
+}
+.item {
+  width: 50%;
+  padding-top: 25px;
+  background-color: lightpink;
+  text-align: justify;
+  font-size: 12pt;
+  border: solid black 1px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.item-5 {
+  width: 100%;
+  order: -1;
 }
