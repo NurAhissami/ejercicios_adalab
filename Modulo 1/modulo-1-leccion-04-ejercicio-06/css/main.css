@@ -1,0 +1,32 @@
+.wrapper {
+  box-sizing: border-box;
+  text-align: center;
+}
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  display: flex;
+}
+
+.aside-1 {
+  order: -1;
+}
+
+.article {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.aside-2 {
+  background: hotpink;
+}
