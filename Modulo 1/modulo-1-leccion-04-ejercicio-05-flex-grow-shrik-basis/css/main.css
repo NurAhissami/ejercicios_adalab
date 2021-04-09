@@ -1,0 +1,23 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  text-align: center;
+  margin: 10px;
+}
+
+.header {
+  background-color: lightcoral;
+}
+.main {
+  background-color: lightgrey;
+}
+.footer {
+  background-color: lightpink;
+  align-self: flex-end;
+  min-height: 20vh;
+  width: 100%;
+  padding-top: 10px;
+}

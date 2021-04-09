@@ -16,15 +16,12 @@
 
 .aside-1 {
   order: -1;
+  background: gold;
 }
 
 .article {
   text-align: left;
   background: deepskyblue;
-}
-
-.aside-1 {
-  background: gold;
 }
 
 .aside-2 {
