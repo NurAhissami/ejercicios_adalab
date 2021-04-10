@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 990;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,13 +13,12 @@
   color: white;
 }
 .principal {
+  position: relative;
+  top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding-top: 100px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
