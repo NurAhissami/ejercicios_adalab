@@ -2,14 +2,70 @@
   display: flex;
   width: 100%;
   max-width: 840px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .item {
   padding: 5px;
 }
 .item-3 {
-  display: flex;
   flex-grow: 0;
+}
+.valoration {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .item-2 {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.img {
+  border-radius: 5px;
+}
+.tittle {
+  font-size: 20px;
+}
+.subtittle {
+  color: grey;
+  padding-top: 5px;
+}
+.button {
+  background-color: #d7d8d7;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button-1 {
+  color: #939393;
+  border: 2px solid #939393;
+  background-color: white;
+}
+.number {
+  background-color: #d7d8d7;
+  height: 40px;
+  width: 40px;
+  margin-left: 8px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 10px;
+}
+.iconos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+.star {
+  padding-top: 5px;
 }
