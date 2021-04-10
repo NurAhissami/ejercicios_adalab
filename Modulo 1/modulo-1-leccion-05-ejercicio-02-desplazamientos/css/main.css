@@ -1,0 +1,34 @@
+.padre {
+  width: 100%;
+  margin: 40px;
+}
+.caja1 {
+  position: relative;
+  left: 100px;
+  top: 50px;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  padding: 30px;
+  background-color: lightsteelblue;
+}
+.caja2 {
+  position: relative;
+  right: 150px;
+  bottom: 320px;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  padding: 30px;
+  background-color: lightslategray;
+}
+.caja3 {
+  position: relative;
+  left: 180px;
+  bottom: 240px;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  padding: 30px;
+  background-color: lightgreen;
+}
