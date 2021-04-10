@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  text-align: justify;
+  line-height: 20px;
+  padding-bottom: 150px;
+}
+div {
+  padding: 10px;
+}
+.cookies {
+  height: 100px;
+  background-color: yellow;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  width: 100%;
+  bottom: 0;
+}
