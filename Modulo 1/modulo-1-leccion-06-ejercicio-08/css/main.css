@@ -1,0 +1,14 @@
+.box {
+  background: red;
+  height: 100px;
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .box {
+    background: yellow;
+  }
+}
+@media all and (min-width: 768px) {
+  .box {
+    background: green;
+  }
+}
