@@ -4,10 +4,12 @@
   flex-direction: column;
   justify-content: space-around;
   min-height: 100vh;
-  text-align: center;
+  text-align: justify;
   margin: 10px;
 }
-
+.item {
+  width: 100%;
+}
 .header {
   background-color: lightcoral;
 }
@@ -18,7 +20,6 @@
 .footer {
   background-color: lightpink;
   align-self: flex-end;
-  min-height: 20vh;
-  width: 100%;
+  min-height: 10vh;
   padding-top: 10px;
 }

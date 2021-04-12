@@ -1,0 +1,39 @@
+.container {
+  margin: 20px 20px;
+}
+.tittle {
+  font-size: 32px;
+  font-weight: bold;
+}
+.parrafo {
+  font-size: 18px;
+  line-height: 24px;
+}
+@media all and (min-width: 768px) {
+  .container {
+    margin-top: 30px;
+    margin: 40px 40px;
+  }
+  .tittle {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .parrafo {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media all and (min-width: 1140px) {
+  .container {
+    margin-top: 190px;
+    margin: auto;
+  }
+  .tittle {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .parrafo {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
