@@ -13,12 +13,8 @@ div {
 }
 .cookies {
   height: 100px;
+  width: 100vw;
   background-color: yellow;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  width: 100%;
   bottom: 0;
 }
