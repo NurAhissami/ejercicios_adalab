@@ -1,0 +1,19 @@
+// fonts
+$font-main: "Roboto", sans-serif;
+
+// colors
+$color-bg: #f3f4f5;
+$color-secondary: #999;
+$fontSize: 20px;
+$line-heigt: 1.5;
+
+@mixin font($fontSize, $line-heigt) {
+  font-size: $fontSize;
+  line-height: $line-heigt;
+  color: lightcoral;
+  font-weight: 500;
+  font-family: $font-main;
+}
+@mixin background {
+  background-color: beige;
+}
