@@ -1,0 +1,21 @@
+:root {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.success {
+  border: 2px solid green;
+  background-color: lightgreen;
+  color: green;
+}
+.error {
+  border: 2px solid red;
+  background-color: lightpink;
+  color: red;
+}
+.warning {
+  border: 2px solid yellow;
+  background-color: lightyellow;
+  color: blue;
+}
