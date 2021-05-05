@@ -5,10 +5,10 @@ const result = document.querySelector ('p');
 
 function parImpar (a) {
   if (a %2 === 0){
-    return true;
+    return "True";
   }
   else{
-    return false;
+    return "False";
   }
 }
 
