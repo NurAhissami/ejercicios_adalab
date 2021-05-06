@@ -1,10 +1,13 @@
 
 const functIva = document.querySelector ('p');
+const ivaNumber= 0.21;
 
 function number (a) {
-  let iva= a*(21/100);
-  let total= iva + a;
-  return "Precio sin IVA:" + a +  "IVA:" + iva + "y total:" + total;
+  const iva= a*ivaNumber;
+  const total= iva + a;
+  return "Precio sin IVA:  " + a+  "      IVA:    " + iva + "    y total:" + total;
 }
 
-functIva.innerHTML= number(10)
+const ticket = number(10);
+
+functIva.innerHTML= ticket;

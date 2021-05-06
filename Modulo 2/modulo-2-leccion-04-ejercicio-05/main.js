@@ -1,15 +1,8 @@
 
-const result = document.querySelector ('p');
-
-
-
-function parImpar (a) {
-  if (a %2 === 0){
-    return "True";
-  }
-  else{
-    return "False";
-  }
+function getEl (a) {
+  return document.querySelector (a)
 }
 
-result.innerHTML= parImpar(4);
+const title = getEl("h1");
+
+title.innerHTML= "Hola";
