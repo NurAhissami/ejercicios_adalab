@@ -1,0 +1,33 @@
+:root {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.text {
+  font-size: 30px;
+}
+.name {
+  display: inline-block;
+  padding: 15px 32px;
+}
+.label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.color-pink {
+  background-color: pink;
+}
+.color-green {
+  background-color: lightgreen;
+}

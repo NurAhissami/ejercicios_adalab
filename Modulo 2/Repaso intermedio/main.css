@@ -1,0 +1,58 @@
+:root {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.text {
+  font-size: 30px;
+}
+.name {
+  display: inline-block;
+  padding: 15px 32px;
+}
+.label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.color-pink {
+  background-color: pink;
+}
+.color-green {
+  background-color: lightgreen;
+}
+body {
+  margin: 0;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.happy {
+  font-size: 100px;
+  margin-bottom: 50px;
+}
+#face {
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+}
+
+.main-color1 {
+  background-color: #ffcc00;
+}
+.main-color2 {
+  background-color: red;
+}
