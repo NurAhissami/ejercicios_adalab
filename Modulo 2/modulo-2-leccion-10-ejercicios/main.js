@@ -78,7 +78,7 @@ function getUser() {
         photo.src = data.avatar_url ? data.avatar_url : "";
         repo.innerHTML = data.public_repos ? data.public_repos : "";
       })
-      .catch((error) => console.error(error));
+      .catch((error) => alert(error));
   }
 }
 document.querySelector(".js-get").addEventListener("click", getUser);
