@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: lightpink;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.title {
+  font-size: 20px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.parragraph {
+  margin-top: 20px;
+}
+.print-name {
+  color: rgb(187, 20, 209);
+  font-weight: bold;
+}
+input {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  height: 30px;
+  border: none;
+  margin-top: 20px;
+}
