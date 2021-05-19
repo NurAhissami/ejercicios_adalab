@@ -43,4 +43,3 @@ function changeColor(ev) {
 }
 
 selects.forEach((element) => element.addEventListener("change", changeColor));
-// select.addEventListener("change", changeColor);
