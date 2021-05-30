@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Evaluación final</title>
+</head>
+
+<body>
+    <header>
+        <h1>Buscador de series</h1>
+        <form>
+            <!--Un campo de texto y un botón para buscar series por su título-->
+            <input type="text" class="input js-search-input" />
+            <input type="button" class="btn js-search-btn" value="Search">
+        </form>
+    </header>
+    <!--Un listado de resultados de búsqueda donde aparece el cartel de la serie y el título-->
+    <main>
+        <section class="total-series">
+            <ul class="series js-series"></ul>
+            <ul class="series-fav js-series-fav"></ul>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
