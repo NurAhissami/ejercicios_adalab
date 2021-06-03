@@ -1,13 +1,21 @@
+import {useState} from 'react';
+
 function OnionHater() {
+  const [isHating, setHating] = useState(false);
   const onChangeListener = (ev) => {
     const valueText = ev.target.value;
-    if (valueText.includes('cebolla')) {
-      document.body.style = 'background: red';
+    if (valueText.includes('cebolla') === true) {
+      setHating(true);
     } else {
-      document.body.style = 'background: white';
+      setHating(false);
     }
   };
-  return <textarea onChange={onChangeListener}></textarea>;
+
+  const classNameColor = isHating === true ? 'colorRed' : 'colorWhite';
+
+  return (
+    <textarea className={classNameColor} onChange={onChangeListener}></textarea>
+  );
 }
 
 export default OnionHater;
