@@ -1,15 +1,27 @@
 import '../stylesheets/App.css';
-
+import {useState, useEffect} from 'react';
 import fetchUsers from './services/RandomUser';
 import UsersList from './UserList';
-import {useState, useEffect} from 'react';
+import '../stylesheets/App.css';
+import Form from './Form';
 
 function App() {
   const [usersData, setUsersData] = useState({results: []});
+  const [loading, setLoading] = useState();
+  // const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
-    fetchUsers().then((data) => setUsersData(data));
-  });
+    setLoading(true);
+    fetchUsers().then((data) => {
+      setUsersData(data);
+      setLoading(false);
+    });
+  }, []);
+
+  // const getUser = (id) => {
+  //   const user = usersData.results.find((user) => user.id.value === id);
+  //   setCurrentUser(user);
+  // };
 
   const handleClick = (ev) => {
     fetchUsers().then((data) => {
@@ -18,113 +30,19 @@ function App() {
       );
 
       setUsersData({
-        usersData: usersData.results,
-        filteredData,
+        results: filteredData,
       });
     });
   };
-  return (
-    <div className="main">
-      <form onClick={handleClick}>
-        <fieldset>
-          <label htmlFor="Germany">
-            <input type="checkbox" name="Germany" value="Germany" />
-            Germany
-          </label>
-          <label htmlFor="Norway">
-            <input type="checkbox" name="Norway" value="Norway" />
-            Norway
-          </label>
-          <label htmlFor="United States">
-            <input type="checkbox" name="United States" value="United States" />
-            United States
-          </label>
-          <label htmlFor="Denmark">
-            <input type="checkbox" name="Denmark" value="Denmark" />
-            Denmark
-          </label>
-        </fieldset>
 
-        <fieldset>
-          <label htmlFor="male">
-            <input type="checkbox" name="male" value="male" />
-            male
-          </label>
-          <label htmlFor="female">
-            <input type="checkbox" name="female" value="male" />
-            female
-          </label>
-        </fieldset>
-      </form>
+  if (loading) return <p>loading...</p>;
+
+  return (
+    <div className="App">
+      <Form onClick={handleClick} />
       <UsersList usersData={usersData} />
     </div>
   );
 }
-
-/*class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleFetch = this.handleFetch.bind(this);
-    this.state = {
-      usersData: [],
-    };
-  }
-  handleFetch(ev) {
-    ev.preventDefault();
-    fetchUsers().then((data) => {
-      const filteredData = data.results.filter(
-        (user) => user.location.country === ev.target.value
-      );
-      // .filter((user) => user.gender === ev.target.value);
-      this.setState({
-        usersData: filteredData,
-      });
-    });
-  }
-
-  render() {
-    return (
-      <div className="main">
-        <form onClick={this.handleFetch}>
-          <fieldset>
-            <label htmlFor="Germany">
-              <input type="checkbox" name="Germany" value="Germany" />
-              Germany
-            </label>
-            <label htmlFor="Norway">
-              <input type="checkbox" name="Norway" value="Norway" />
-              Norway
-            </label>
-            <label htmlFor="United States">
-              <input
-                type="checkbox"
-                name="United States"
-                value="United States"
-              />
-              United States
-            </label>
-            <label htmlFor="Denmark">
-              <input type="checkbox" name="Denmark" value="Denmark" />
-              Denmark
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <label htmlFor="male">
-              <input type="checkbox" name="male" value="male" />
-              male
-            </label>
-            <label htmlFor="female">
-              <input type="checkbox" name="female" value="male" />
-              female
-            </label>
-          </fieldset>
-          {/* <button onClick={this.handleFetch}>Search</button> */ /*}
-        </form>
-        <UsersList usersData={this.state.usersData} />
-      </div>
-    );
-  }
-}*/
 
 export default App;

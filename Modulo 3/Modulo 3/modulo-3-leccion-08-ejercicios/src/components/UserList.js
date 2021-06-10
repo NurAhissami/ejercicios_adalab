@@ -1,12 +1,18 @@
 import React from 'react';
 import User from './User';
 
-function UserList(props) {
-  const mapUsers = props.usersData.map((user) => user.name.first);
+function UserList({usersData}) {
+  // { results:[] }
+  if (!usersData?.results?.length) return <p>Sorry, no users</p>;
   return (
-    <ul>
-      <User name={mapUsers} />
-    </ul>
+    <>
+      {/* <pre>{JSON.stringify(usersData.results, null, 2)}</pre> */}
+      {usersData.results.map(({name, id}) => (
+        <ul>
+          <User name={name.first} id={id}></User>
+        </ul>
+      ))}
+    </>
   );
 }
 
