@@ -1,15 +1,25 @@
-import React from 'react';
 import User from './User';
+import {Link} from 'react-router-dom';
 
-function UserList({usersData}) {
+function UserList(props) {
   // { results:[] }
+  const renderProducts = () => {
+    return props.products.map((product) => {
+      return (
+        <li key={product.id}>
+          <Link to={`./product/${product.id}`}>
+            <ProductItem product={product} />
+          </Link>
+        </li>
+      );
+    });
+  };
   if (!usersData?.results?.length) return <p>Sorry, no users</p>;
   return (
     <>
-      {/* <pre>{JSON.stringify(usersData.results, null, 2)}</pre> */}
-      {usersData.results.map(({name, id}) => (
+      {usersData.results.map((props) => (
         <ul>
-          <User name={name.first} id={id}></User>
+          <User name={props.name.first} id={id}></User>
         </ul>
       ))}
     </>

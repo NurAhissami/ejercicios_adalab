@@ -4,6 +4,10 @@ import fetchUsers from './services/RandomUser';
 import UsersList from './UserList';
 import '../stylesheets/App.css';
 import Form from './Form';
+import UserDescription from './UserDescription';
+import ProductNotFound from './ProductNotFound';
+
+import {Route, Switch} from 'react-router-dom';
 
 function App() {
   const [usersData, setUsersData] = useState({results: []});
@@ -18,10 +22,17 @@ function App() {
     });
   }, []);
 
-  // const getUser = (id) => {
-  //   const user = usersData.results.find((user) => user.id.value === id);
-  //   setCurrentUser(user);
-  // };
+  const getUser = (products) => {
+    const routerProductId = products.match.params.id;
+    const productFound = products.find(
+      (product) => product.id.value === routerProductId
+    );
+    if (productFound) {
+      return <UserDescription product={productFound} />;
+    } else {
+      return <ProductNotFound />;
+    }
+  };
 
   const handleClick = (ev) => {
     fetchUsers().then((data) => {
@@ -41,6 +52,13 @@ function App() {
     <div className="App">
       <Form onClick={handleClick} />
       <UsersList usersData={usersData} />
+
+      <Switch>
+        <Route path="/products">
+          <UsersList usersData={usersData} />
+        </Route>
+        <Route path="/userlist/:id" render={getUser} />
+      </Switch>
     </div>
   );
 }
